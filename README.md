@@ -43,17 +43,17 @@ Pipeline configurado com GitHub Actions para: Execução automática dos testes,
 
 ## 🎯 Objetivo
 Demonstrar competências práticas em QA, incluindo:
--Pensamento analítico
--Escrita de cenários de teste
--Identificação de falhas
--Automação de testes
--Boas práticas de engenharia de software
+- Pensamento analítico
+- Escrita de cenários de teste
+- Identificação de falhas
+- Automação de testes
+- Boas práticas de engenharia de software
 
 
 ## 💡 Diferenciais
--Estrutura baseada em projeto real
--Uso de BDD (Gherkin)
--Arquitetura com Page Object Model
--Integração com CI/CD
+- Estrutura baseada em projeto real
+- Uso de BDD (Gherkin)
+- Arquitetura com Page Object Model
+- Integração com CI/CD
 
 
