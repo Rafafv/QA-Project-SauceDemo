@@ -26,7 +26,6 @@ Os cenários foram escritos em Gherkin.
 
 
 ## ⚙️ Automação
-
 🔹 Tecnologias utilizadas: Selenium, Python, Pytest
 
 🔹 Arquitetura: Page Object Model (POM)
@@ -35,16 +34,26 @@ Os cenários foram escritos em Gherkin.
 
 
 ## 🔁 CI/CD
-
-Pipeline automatizado com GitHub Actions para execução dos testes.
+Pipeline configurado com GitHub Actions para: Execução automática dos testes, Validação contínua do projeto
 
 
 ## 🐞 Bug Reports
-
 📄 Ver bugs documentados: manual-tests/bug-reports.md
 
 
 ## 🎯 Objetivo
+Demonstrar competências práticas em QA, incluindo:
+-Pensamento analítico
+-Escrita de cenários de teste
+-Identificação de falhas
+-Automação de testes
+-Boas práticas de engenharia de software
 
-Este projeto foi desenvolvido para demonstrar habilidades práticas em QA, simulando um ambiente real de testes de um e-commerce.
+
+## 💡 Diferenciais
+-Estrutura baseada em projeto real
+-Uso de BDD (Gherkin)
+-Arquitetura com Page Object Model
+-Integração com CI/CD
+
 
