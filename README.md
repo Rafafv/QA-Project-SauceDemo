@@ -16,13 +16,13 @@ Foram aplicados os seguintes tipos de testes:
 - Regressão
 - Exploratórios
 - Usabilidade
-📄 Documento completo: manual-tests/test-plan.md
+- 📄 Documento completo: manual-tests/test-plan.md
 
 
 ## 🧪 BDD – Cenários de Teste
 
 Os cenários foram escritos em Gherkin.
-📄 Ver cenários: manual-tests/test-scenarios.feature
+- 📄 Ver cenários: manual-tests/test-scenarios.feature
 
 
 ## ⚙️ Automação
