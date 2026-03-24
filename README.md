@@ -27,18 +27,11 @@ Os cenários foram escritos em Gherkin.
 
 ## ⚙️ Automação
 
-🔹 Tecnologias utilizadas:
-Selenium
-Python
-Pytest
+🔹 Tecnologias utilizadas: Selenium, Python, Pytest
 
-🔹 Arquitetura:
-Page Object Model (POM)
+🔹 Arquitetura: Page Object Model (POM)
 
-🔹 Cobertura automatizada:
-Login
-Carrinho
-Checkout
+🔹 Cobertura automatizada: Login, Carrinho, Checkout
 
 
 ## 🔁 CI/CD
