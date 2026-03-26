@@ -23,8 +23,13 @@ class CheckoutPage extends BasePage {
   }
 
   async obterMensagemErro() {
-    const el = await this.find(locators.errorMessage);
-    return await el.getText();
+      try {
+          const el = await this.find(locators.errorMessage);
+
+      return await el.getText();
+      } catch (error) {
+         throw new Error('Mensagem de sucesso não apareceu');
+      }
   }
 }
 

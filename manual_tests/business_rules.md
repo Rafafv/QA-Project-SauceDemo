@@ -50,7 +50,6 @@ Este documento descreve as principais regras de negócio identificadas no sistem
 
 * O pedido só pode ser finalizado após o preenchimento correto dos dados
 * O sistema deve exibir uma confirmação de sucesso após a compra
-* Após finalizar a compra, o carrinho deve ser esvaziado
 
 ---
 

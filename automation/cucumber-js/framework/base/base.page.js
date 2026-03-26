@@ -4,7 +4,7 @@ class Basepage{
 
     constructor(driver){
         this.driver = driver;
-        this.timeout = 20000; //5s
+        this.timeout = 5000; //5s
     }
 
     async find(locator){
