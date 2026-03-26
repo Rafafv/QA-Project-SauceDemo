@@ -1,7 +1,7 @@
 # 🧪 QA Project – SauceDemo
 ## 📌 Sobre o projeto
 Este projeto foi desenvolvido para demonstrar habilidades completas em Quality Assurance (QA), cobrindo desde testes manuais até automação e integração contínua.
-O foco está na validação do fluxo principal de um e-commerce, simulando um cenário real de testes em ambiente de produção.
+O foco está na validação do fluxo principal de um e-commerce, simulando um cenário real de testes em ambiente de produção. Os cenários foram modelados com base em fluxos de negócio do usuário, seguindo boas práticas de BDD.
 
 ## 🚀 Escopo testado
 - Login de usuário
@@ -16,13 +16,13 @@ Foram aplicados os seguintes tipos de testes:
 - Regressão
 - Exploratórios
 - Usabilidade
-- 📄 Documento completo: manual-tests/test-plan.md
+- 📄 Documento completo: testes_manuais/plano_teste.md
 
 
 ## 🧪 BDD – Cenários de Teste
 
-Os cenários foram escritos em Gherkin.
-- 📄 Ver cenários: manual-tests/test-scenarios.feature
+Os cenários foram escritos em Gherkin 
+- 📄 Ver cenários: automacao/cucumber-js/features/
 
 
 ## ⚙️ Automação

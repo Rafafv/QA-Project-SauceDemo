@@ -1,0 +1,26 @@
+{
+  "name": "qa-project-saucedemo",
+  "version": "1.0.0",
+  "description": "Este projeto foi desenvolvido para demonstrar habilidades completas em Quality Assurance (QA), cobrindo desde testes manuais até automação e integração contínua. O foco está na validação do fluxo principal de um e-commerce, simulando um cenário real de testes em ambiente de produção.",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rafafv/QA-Project-SauceDemo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Rafafv/QA-Project-SauceDemo/issues"
+  },
+  "homepage": "https://github.com/Rafafv/QA-Project-SauceDemo#readme",
+  "dependencies": {
+    "@cucumber/cucumber": "^12.7.0",
+    "chromedriver": "^146.0.6",
+    "selenium-webdriver": "^4.41.0"
+  }
+}
