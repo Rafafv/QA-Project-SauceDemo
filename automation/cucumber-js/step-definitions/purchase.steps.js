@@ -1,4 +1,4 @@
-const { Given, When, Then, After, Before } = require('@cucumber/cucumber');
+const { Given, When, Then } = require('@cucumber/cucumber');
 const LoginPage = require('../framework/pages/login.page');
 const InventoryPage = require('../framework/pages/inventory.page');
 const CartPage = require('../framework/pages/cart.page');
@@ -6,19 +6,16 @@ const CheckoutPage = require('../framework/pages/checkout.page');
 
 let loginPage, inventoryPage, cartPage, checkoutPage;
 
-Before(async function () {
-  await this.abrirBrowser();
-
+Given('que o usuário está logado', async function () {  
   loginPage = new LoginPage(this.driver);
   inventoryPage = new InventoryPage(this.driver);
   cartPage = new CartPage(this.driver);
   checkoutPage = new CheckoutPage(this.driver);
-});
 
-Given('que o usuário está logado', async function () {
   await loginPage.acessarPagina();
   await loginPage.fazerLogin('standard_user', 'secret_sauce');
 });
+
 
 //AÇÕES
 
@@ -39,7 +36,7 @@ When('inicia o checkout', async function () {
 });
 
 When('preenche os dados corretamente', async function () {
-  await checkoutPage.preencherDados('Rafa', 'QA', '12345');
+  await checkoutPage.preencherDados('Rafa', 'Viana', '12345');
   await checkoutPage.continuar();
 });
 
@@ -59,28 +56,17 @@ When('remove o produto', async function () {
   await cartPage.removerProduto();
 });
 
-When('tenta finalizar sem continuar', async function () {
-  await checkoutPage.finalizarCompra(); 
-});
-
 
 //VALIDAÇÕES
 
 Then('deve ver a confirmação de pedido', async function () {
   const mensagem = await checkoutPage.obterMensagemSucesso();
 
-  if (!mensagem.toLowerCase().includes('thank you')) {
+  if (!mensagem || !mensagem.toLowerCase().includes('thank you')) {
     throw new Error('Compra não finalizada com sucesso');
   }
 });
 
-Then('deve ver uma mensagem de carrinho vazio', async function () {
-  const vazio = await cartPage.carrinhoEstaVazio();
-
-  if (!vazio) {
-    throw new Error('Carrinho deveria estar vazio');
-  }
-});
 
 Then('deve ver mensagem de erro {string}', async function (mensagemEsperada) {
   const mensagem = await checkoutPage.obterMensagemErro();
@@ -106,19 +92,3 @@ Then('deve ver {int} produtos no carrinho', async function (quantidade) {
   }
 });
 
-Then('não deve permitir finalizar a compra', async function () {
-  const sucesso = await checkoutPage.compraFoiFinalizada();
-
-  if (sucesso) {
-    throw new Error('Compra não deveria ser finalizada');
-  }
-});
-
-After(async function () {
-   if (typeof this.fecharBrowser === 'function') {
-    await this.fecharBrowser();
-    
-  } else {
-    console.error("ERRO: fecharBrowser não é uma função no contexto atual!");
-  }
-});

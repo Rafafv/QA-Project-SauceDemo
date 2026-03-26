@@ -14,6 +14,11 @@ class Basepage{
         );
     }
 
+    async findAll(locator){
+        const elements = await this.driver.findElements(By[locator.using](locator.value));        
+        return elements || [];
+    }
+
     async click(locator){
         const element = await this.find(locator);
 
@@ -35,6 +40,8 @@ class Basepage{
         await element.clear();
         await element.sendKeys(String(text));
     }
+ 
+
 }
 
 module.exports = Basepage;

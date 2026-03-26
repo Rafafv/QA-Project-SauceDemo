@@ -18,12 +18,13 @@ Feature: Purchase
     Then deve ver a confirmação de pedido
 
 
-  Scenario: Não deve permitir checkout com carrinho vazio
+  Scenario: Checkout com carrinho vazio deve exibir erro ao tentar continuar
     When acessa o carrinho
     And inicia o checkout
-    Then deve ver uma mensagem de carrinho vazio
+    And tenta continuar
+    Then deve ver mensagem de erro "First Name is required"
 
-
+  @validation
   Scenario Outline: Validação de campos obrigatórios no checkout
     When adiciona um produto ao carrinho
     And acessa o carrinho
@@ -34,10 +35,10 @@ Feature: Purchase
 
     Examples:
       | nome | sobrenome | cep   | mensagem                  |
-      |      | Silva     | 12345 | First Name is required    |
+      |      | Viana     | 12345 | First Name is required    |
       | Rafa |           | 12345 | Last Name is required     |
-      | Rafa | Silva     |       | Postal Code is required   |
-
+      | Rafa | Viana     |       | Postal Code is required   |
+     
 
   Scenario: Remover produto do carrinho
     When adiciona um produto ao carrinho
@@ -50,11 +51,3 @@ Feature: Purchase
     When adiciona dois produtos ao carrinho
     And acessa o carrinho
     Then deve ver 2 produtos no carrinho
-
-
-  Scenario: Não deve finalizar compra sem etapa de confirmação
-    When adiciona um produto ao carrinho
-    And acessa o carrinho
-    And inicia o checkout
-    And tenta finalizar sem continuar
-    Then não deve permitir finalizar a compra

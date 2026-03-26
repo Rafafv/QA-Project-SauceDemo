@@ -12,6 +12,7 @@ class InventoryPage extends BasePage {
   }
 
   async adicionarDoisProdutos() {
+    await this.click(locators.firstProductAddButton);
     await this.click(locators.secondProductAddButton);
   }
   

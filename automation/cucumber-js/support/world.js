@@ -9,9 +9,9 @@ class CustomWorld {
   }
 
   async abrirBrowser() {
-    const options = new firefox.Options();
-    // Adiciona o argumento headless
-    options.addArguments('--headless'); 
+    const options = new firefox.Options();    
+    options.addArguments('--headless');
+
     this.driver = await new Builder()
       .forBrowser('firefox')
       .setFirefoxOptions(options)
@@ -20,8 +20,7 @@ class CustomWorld {
 
   async fecharBrowser() {
     if (this.driver) {
-      await this.driver.quit();
-      this.driver = null;
+       await this.driver.quit();  
     }
   }
 }

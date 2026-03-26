@@ -1,10 +1,9 @@
-const { Given, When, Then, After } = require('@cucumber/cucumber');
+const { Given, When, Then } = require('@cucumber/cucumber');
 const LoginPage = require('../framework/pages/login.page');
 
 let loginPage;
 
-Given('que o usuário acessa a página de login', async function () {
-  await this.abrirBrowser();
+Given('que o usuário acessa a página de login', async function () { 
   loginPage = new LoginPage(this.driver);
   await loginPage.acessarPagina();
 });
@@ -38,11 +37,3 @@ Then('deve ver {string}', async function (resultado) {
   }
 });
 
-After(async function () {  
-  if (typeof this.fecharBrowser === 'function') {
-    await this.fecharBrowser();
-    
-  } else {
-    console.error("ERRO: fecharBrowser não é uma função no contexto atual!");
-  }
-});

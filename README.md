@@ -27,9 +27,14 @@ Foram aplicados os seguintes tipos de testes:
 - Selenium WebDriver
 - JavaScript (Node.js)
 - Cucumber (BDD)
-- Gherkin
+- Gherkin (especificação de cenários)
 - Page Object Model (POM)
-- Arquitetura baseada em separação de camadas (BasePage, Pages, Locators)
+- Hooks do Cucumber (Before/After)
+- Esperas explícitas (WebDriverWait)
+- Arquitetura modular:
+  - BasePage (ações comuns)
+  - Pages (regras de negócio)
+  - Locators (mapeamento de elementos)
 
 
 🔹 Cobertura automatizada:

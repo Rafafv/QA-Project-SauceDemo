@@ -8,17 +8,21 @@ class CartPage extends BasePage {
   }
 
   async removerProduto() {
-    await this.click(locators.removeSauceButton);
+    await this.click(locators.cartButton);
+  }
+
+  async obterQuantidadeItens() {
+    const items = await this.findAll(locators.cartItem);
+    return items.length;
   }
 
   async carrinhoEstaVazio() {
-    const items = await this.find(locators.cartItem);
-    return items.length === 0;
+    return (await this.obterQuantidadeItens()) === 0;
   }
 
   async contarProdutos() {
-    const items = await this.find(locators.cartItem);
-    return parseInt(items.length);
+    const items = await this.findAll(locators.cartItem);          
+    return items.length;
   }
 }
 
