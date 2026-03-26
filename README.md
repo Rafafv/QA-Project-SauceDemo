@@ -13,26 +13,24 @@ O foco está na validação do fluxo principal de um e-commerce, simulando um ce
 ## 🧠 Estratégia de Testes
 Foram aplicados os seguintes tipos de testes:
 - Funcionais
-- Regressão
 - Exploratórios
 - Usabilidade
 - 📄 Documento completo: testes_manuais/plano_teste.md
 
 
 ## 🧪 BDD – Cenários de Teste
-
-Os cenários foram escritos em Gherkin 
 - 📄 Ver cenários: automacao/cucumber-js/features/
 
 
-## ⚙️ Automação
+## 🤖 Automação
 🔹 Tecnologias utilizadas:
-- Selenium
-- Python
-- Pytest
-
-🔹 Arquitetura:
+- Selenium WebDriver
+- JavaScript (Node.js)
+- Cucumber (BDD)
+- Gherkin
 - Page Object Model (POM)
+- Arquitetura baseada em separação de camadas (BasePage, Pages, Locators)
+
 
 🔹 Cobertura automatizada:
 - Login
@@ -62,7 +60,7 @@ Demonstrar competências práticas em QA, incluindo:
 ## 💡 Diferenciais
 - Estrutura baseada em projeto real
 - Uso de BDD (Gherkin)
-- Arquitetura com Page Object Model
+- Arquitetura com POM (Page Object Model)
 - Integração com CI/CD
 
 
